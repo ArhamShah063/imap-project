@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arham Shah · Passport</title>
+  <meta name="description" content="Arham Shah: data science student at NMIMS Mumbai, former EPC intern at Reliance Retail, cook, traveller, gamer and occasional skydiver.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <!-- Pick light or dark before the page paints, so there is no flash of the wrong theme -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") {
+        t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=IBM+Plex+Mono:wght@400;500&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top bar: name, page tabs and an XP bar that fills as you scroll -->
+  <nav class="topbar" aria-label="Passport pages">
+    <a class="topbar__name" href="#top">Arham Shah</a>
+    <ul class="topbar__tabs">
+      <li><a href="#about">About</a></li>
+      <li><a href="#route">Route</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#stamps">Skills</a></li>
+      <li><a href="#achievements">Interests</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="xp" aria-hidden="true">
+      <span class="xp__label">XP</span>
+      <span class="xp__track"><span class="xp__fill"></span></span>
+    </div>
+    <button class="theme" type="button" aria-label="Switch to dark mode" title="Switch light / dark">
+      <svg class="theme__sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="theme__moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+    </button>
+  </nav>
+
+  <!-- ============ COVER ============ -->
+  <header class="desk" id="top">
+    <div class="book" data-open="false">
+
+      <div class="book__inside">
+        <p class="inside__small">Welcome aboard</p>
+        <h1 class="inside__hello">Hi, I’m Arham Shah.</h1>
+        <p class="inside__lede">I study data science, build tools out of messy spreadsheets, and spend the rest of my time cooking, eating, gaming, reading up on how big things get built, or somewhere in the water or the sky.</p>
+        <a class="inside__cta" href="#about">Turn the page</a>
+      </div>
+
+      <div class="book__flap">
+      <!-- back of the cover = inside-left page, seen once the passport opens on wider screens -->
+      <div class="book__leaf" aria-hidden="true">
+        <p class="leaf__title">Tips for this level</p>
+        <ul class="leaf__tips">
+          <li>Best read with snacks.</li>
+          <li>Projects are boarding passes. Hit “Board” to see the code.</li>
+          <li>Visas stamp when you tap them. Collect all twelve.</li>
+        </ul>
+        <svg class="leaf__doodle" viewBox="0 0 220 70"><path d="M6 60 C 60 10, 120 70, 180 22" /><path d="M180 22 l14 -6 l-6 14 z" class="tip" /></svg>
+      </div>
+      <button class="book__cover" type="button" aria-label="Open the passport">
+        <span class="cover__issuer">Issued in Mumbai</span>
+        <svg class="cover__emblem" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="44" />
+          <ellipse cx="60" cy="60" rx="18" ry="44" />
+          <path d="M16 60h88M22 38h76M22 82h76" />
+          <circle cx="60" cy="60" r="54" class="ring" />
+          <!-- little plane orbiting the globe -->
+          <g class="cover__plane">
+            <path d="M60 2 l5 8 h-3 l-2 4 l-2 -4 h-3 z" class="plane" />
+          </g>
+        </svg>
+        <span class="cover__word foil">Passport</span>
+        <span class="cover__name">Arham Shah</span>
+        <span class="cover__chip" aria-hidden="true"></span>
+      </button>
+      </div>
+      <span class="cover__hint" aria-hidden="true">tap to open</span>
+
+    </div>
+  </header>
+
+  <main class="pages">
+
+    <!-- ============ DATA PAGE (ABOUT) ============ -->
+    <section class="page page--data" id="about" aria-labelledby="about-title">
+      <div class="page__head">
+        <h2 id="about-title">Personal details</h2>
+        <span class="page__no">2</span>
+      </div>
+
+      <div class="data">
+        <figure class="data__photo">
+          <span class="photo__frame"><img src="assets/photo.jpg" alt="Photo of Arham Shah" width="420" height="540"></span>
+          <figcaption class="photo__sig">Arham Shah</figcaption>
+        </figure>
+
+        <dl class="data__fields">
+          <div><dt>Surname / Nom</dt><dd>Shah</dd></div>
+          <div><dt>Given name / Prénom</dt><dd>Arham</dd></div>
+          <div class="wide"><dt>Studying / Études</dt><dd>MBA Tech, Data Science (3rd year)</dd></div>
+          <div class="wide"><dt>Institution / Établissement</dt><dd>SVKM’s NMIMS Mukesh Patel School of Technology Management &amp; Engineering, Mumbai</dd></div>
+          <div class="wide"><dt>Interned / Stage</dt><dd>EPC intern, Reliance Retail (2026)</dd></div>
+          <div><dt>Languages / Langues</dt><dd>English, French (débutant)</dd></div>
+          <div><dt>Destinations</dt><dd>Everywhere</dd></div>
+        </dl>
+      </div>
+
+      <div class="purpose">
+        <h3>Purpose of visit</h3>
+        <p>I’m Arham Shah, a third-year MBA Tech student specialising in data science at NMIMS in Mumbai. I like taking messy things, like a 35-column Excel tracker, a PNG image or a list of earthquakes, and turning them into something people can actually use.</p>
+        <p>In 2026 I interned with the Engineering, Procurement &amp; Construction team at Reliance Retail in Navi Mumbai, where two of the projects in this passport were born. I also like civil engineering and construction, so seeing how real stores get built was a good fit. The mix of business and code is exactly why I picked MBA Tech.</p>
+        <p>Away from a screen I’m planning the next trip, cooking, eating, gaming, or in the water. I’ve jumped out of a plane, been towed into the sky behind a boat, and stood up on a surfboard (briefly). I also care about giving back, and make time for community service.</p>
+      </div>
+
+      <p class="mrz" aria-label="Machine readable zone">
+        <span>P&lt;MUMSHAH&lt;&lt;ARHAM&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+        <span>DATASCIENCE&lt;COOK&lt;GAMER&lt;SKYDIVER&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;2026</span>
+      </p>
+    </section>
+
+    <!-- ============ ROUTE (EDUCATION + EXPERIENCE) ============ -->
+    <section class="page page--route" id="route" aria-labelledby="route-title">
+      <div class="page__head">
+        <h2 id="route-title">Route so far</h2>
+        <span class="page__no">3</span>
+      </div>
+
+      <ol class="route">
+        <li class="stop">
+          <span class="stop__code">BOM</span>
+          <div class="stop__body">
+            <h3>Bombay Cambridge International School</h3>
+            <p class="stop__meta">Andheri East, Mumbai. IGCSE</p>
+            <p>Where it started.</p>
+          </div>
+        </li>
+        <li class="stop stop--now">
+          <span class="stop__code">MPS</span>
+          <div class="stop__body">
+            <h3>NMIMS Mukesh Patel School of Technology Management &amp; Engineering</h3>
+            <p class="stop__meta">Mumbai. MBA Tech, Data Science, 2024 to now</p>
+            <p>Python, R, C++, statistics and machine learning, alongside the management side of the degree. Picked up the AWS Cloud Technical Essentials certificate on the way.</p>
+            <span class="stop__plane" aria-hidden="true">✈</span>
+          </div>
+        </li>
+        <li class="stop">
+          <span class="stop__code">RCP</span>
+          <div class="stop__body">
+            <h3>Reliance Retail, EPC intern</h3>
+            <p class="stop__meta">Reliance Corporate Park, Navi Mumbai. 2026</p>
+            <p>Saw how procurement and construction work behind new store launches, and built tools to make that tracking less painful.</p>
+          </div>
+        </li>
+        <li class="stop stop--next">
+          <span class="stop__code">???</span>
+          <div class="stop__body">
+            <h3>Next stop</h3>
+            <p class="handnote">not booked yet. suggestions welcome!</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ PROJECTS (BOARDING PASSES) ============ -->
+    <section class="page page--passes" id="projects" aria-labelledby="projects-title">
+      <div class="page__head">
+        <h2 id="projects-title">Boarding passes</h2>
+        <span class="page__no">4</span>
+      </div>
+      <p class="page__intro">Six trips so far. Each one is a project on my GitHub. Tap “Board” to see the code.</p>
+
+      <div class="passes">
+
+        <article class="pass" style="--ink: var(--red)">
+          <div class="pass__main">
+            <header class="pass__top"><span class="pass__air">AS Air</span><span class="pass__class">Work trip</span></header>
+            <div class="pass__route">
+              <div><span class="code">XLS</span><span class="cap">Excel tracker</span></div>
+              <span class="pass__arrow" aria-hidden="true">✈</span>
+              <div><span class="code">DSH</span><span class="cap">Live dashboard</span></div>
+            </div>
+            <h3>EPC Site Tracker</h3>
+            <p>A Streamlit dashboard that follows new Reliance Retail stores from land to launch: delay analysis, a planned-vs-actual S-curve, PM performance, store lookup, site inspections and an issue tracker, backed by Supabase. Runs on sample data.</p>
+            <ul class="pass__gate"><li>Python</li><li>Streamlit</li><li>Plotly</li><li>Supabase</li></ul>
+          </div>
+          <div class="pass__stub">
+            <dl><div><dt>Flight</dt><dd>AS 101</dd></div><div><dt>Departed</dt><dd>Jun 2026</dd></div></dl>
+            <span class="barcode" aria-hidden="true"></span>
+            <a class="board" href="https://github.com/ArhamShah063/EPC-Site-Tracker" target="_blank" rel="noopener">Board</a>
+          </div>
+        </article>
+
+        <article class="pass" style="--ink: var(--orange)">
+          <div class="pass__main">
+            <header class="pass__top"><span class="pass__air">AS Air</span><span class="pass__class">Work trip</span></header>
+            <div class="pass__route">
+              <div><span class="code">1</span><span class="cap">Master sheet</span></div>
+              <span class="pass__arrow" aria-hidden="true">✈</span>
+              <div><span class="code">9</span><span class="cap">PM files, and back</span></div>
+            </div>
+            <h3>EPC Data Automation</h3>
+            <p>Two double-click scripts: one splits a master Excel file into a sheet for each project manager, the other merges everyone’s edits back. It cleans stray spaces and mixed date formats, and flags it in red when two PMs change the same cell.</p>
+            <ul class="pass__gate"><li>Python</li><li>pandas</li><li>openpyxl</li></ul>
+          </div>
+          <div class="pass__stub">
+            <dl><div><dt>Flight</dt><dd>AS 102</dd></div><div><dt>Departed</dt><dd>Jun 2026</dd></div></dl>
+            <span class="barcode" aria-hidden="true"></span>
+            <a class="board" href="https://github.com/ArhamShah063/EPC-Data-Automation" target="_blank" rel="noopener">Board</a>
+          </div>
+        </article>
+
+        <article class="pass" style="--ink: var(--violet)">
+          <div class="pass__main">
+            <header class="pass__top"><span class="pass__air">AS Air</span><span class="pass__class">Undercover</span></header>
+            <div class="pass__route">
+              <div><span class="code">TXT</span><span class="cap">Secret message</span></div>
+              <span class="pass__arrow" aria-hidden="true">✈</span>
+              <div><span class="code">PNG</span><span class="cap">Innocent image</span></div>
+            </div>
+            <h3>STEGOCIPHER PRO</h3>
+            <p>Hides text inside the least significant bits of a PNG and pulls it back out, then plays forensic analyst on itself: PSNR and MSE, bit-plane maps, FFT spectra and a cross-image detection matrix.</p>
+            <ul class="pass__gate"><li>Python</li><li>Streamlit</li><li>NumPy</li><li>OpenCV</li></ul>
+          </div>
+          <div class="pass__stub">
+            <dl><div><dt>Flight</dt><dd>AS 203</dd></div><div><dt>Departed</dt><dd>Apr 2026</dd></div></dl>
+            <span class="barcode" aria-hidden="true"></span>
+            <a class="board" href="https://github.com/ArhamShah063/STEGOCIPHER-PRO" target="_blank" rel="noopener">Board</a>
+          </div>
+        </article>
+
+        <article class="pass" style="--ink: var(--blue)">
+          <div class="pass__main">
+            <header class="pass__top"><span class="pass__air">AS Air</span><span class="pass__class">Turbulence expected</span></header>
+            <div class="pass__route">
+              <div><span class="code">λ=5</span><span class="cap">Quakes a year</span></div>
+              <span class="pass__arrow" aria-hidden="true">✈</span>
+              <div><span class="code">20K</span><span class="cap">Simulated futures</span></div>
+            </div>
+            <h3>Earthquake Simulator</h3>
+            <p>Models earthquakes as a Poisson process, with exponential gaps between events and magnitudes from the Gutenberg–Richter law. Runs up to 20,000 Monte Carlo simulations and plots the results on a world map.</p>
+            <ul class="pass__gate"><li>Python</li><li>Streamlit</li><li>NumPy</li><li>Plotly</li></ul>
+          </div>
+          <div class="pass__stub">
+            <dl><div><dt>Flight</dt><dd>AS 304</dd></div><div><dt>Departed</dt><dd>Jun 2026</dd></div></dl>
+            <span class="barcode" aria-hidden="true"></span>
+            <a class="board" href="https://github.com/ArhamShah063/EarthQuake-Simulator" target="_blank" rel="noopener">Board</a>
+          </div>
+        </article>
+
+        <article class="pass" style="--ink: var(--green)">
+          <div class="pass__main">
+            <header class="pass__top"><span class="pass__air">AS Air</span><span class="pass__class">Full stack</span></header>
+            <div class="pass__route">
+              <div><span class="code">GIT</span><span class="cap">First commit</span></div>
+              <span class="pass__arrow" aria-hidden="true">✈</span>
+              <div><span class="code">DKR</span><span class="cap">Docker container</span></div>
+            </div>
+            <h3>TaskFlow</h3>
+            <p>A task tracker built end to end: Django models and admin, login, priority filters and a dark-mode toggle in plain JavaScript, then packed into Docker Compose with a Postgres database.</p>
+            <ul class="pass__gate"><li>Django</li><li>PostgreSQL</li><li>Docker</li><li>JavaScript</li></ul>
+          </div>
+          <div class="pass__stub">
+            <dl><div><dt>Flight</dt><dd>AS 405</dd></div><div><dt>Departed</dt><dd>Sep 2026</dd></div></dl>
+            <span class="barcode" aria-hidden="true"></span>
+            <a class="board" href="https://github.com/ArhamShah063/Taskflow" target="_blank" rel="noopener">Board</a>
+          </div>
+        </article>
+
+        <article class="pass" style="--ink: var(--teal)">
+          <div class="pass__main">
+            <header class="pass__top"><span class="pass__air">AS Air</span><span class="pass__class">Technically a ship</span></header>
+            <div class="pass__route">
+              <div><span class="code">891</span><span class="cap">Passengers</span></div>
+              <span class="pass__arrow" aria-hidden="true">✈</span>
+              <div><span class="code">83%</span><span class="cap">Accuracy</span></div>
+            </div>
+            <h3>Titanic Survival Prediction</h3>
+            <p>Cleaned and explored the Kaggle Titanic data, built family-size and age-group features, then raced logistic regression, a decision tree and a random forest. The forest won, at about 83% accuracy.</p>
+            <ul class="pass__gate"><li>Python</li><li>pandas</li><li>scikit-learn</li><li>Seaborn</li></ul>
+          </div>
+          <div class="pass__stub">
+            <dl><div><dt>Flight</dt><dd>AS 506</dd></div><div><dt>Departed</dt><dd>May 2026</dd></div></dl>
+            <span class="barcode" aria-hidden="true"></span>
+            <a class="board" href="https://github.com/ArhamShah063/Titanic_survival_Prediction_ML" target="_blank" rel="noopener">Board</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ SKILLS (VISA STAMPS) ============ -->
+    <section class="page page--stamps" id="stamps" aria-labelledby="stamps-title">
+      <div class="page__head">
+        <h2 id="stamps-title">Visas &amp; entry stamps</h2>
+        <span class="page__no">5</span>
+      </div>
+      <p class="page__intro">The tools I can enter with. Tap each visa to stamp it. <span class="stamp-count" aria-live="polite">0 of 12 stamped</span></p>
+
+      <div class="stamps">
+        <button class="stamp stamp--circle"  style="--ink: var(--red);    --r: -8deg" type="button"><b>Python</b><small>Multiple entry</small></button>
+        <button class="stamp stamp--rect"    style="--ink: var(--blue);   --r: 5deg"  type="button"><b>R</b><small>Statistics visa</small></button>
+        <button class="stamp stamp--oval"    style="--ink: var(--violet); --r: -3deg" type="button"><b>C++</b><small>Entry permitted</small></button>
+        <button class="stamp stamp--rect"    style="--ink: var(--green);  --r: -6deg" type="button"><b>pandas &amp; NumPy</b><small>Data clearance</small></button>
+        <button class="stamp stamp--circle"  style="--ink: var(--orange); --r: 9deg"  type="button"><b>scikit-learn</b><small>Approved</small></button>
+        <button class="stamp stamp--hex"     style="--ink: var(--teal);   --r: -2deg" type="button"><b>Streamlit</b><small>Frequent visitor</small></button>
+        <button class="stamp stamp--oval"    style="--ink: var(--green);  --r: 7deg"  type="button"><b>Django</b><small>Entry permitted</small></button>
+        <button class="stamp stamp--rect"    style="--ink: var(--blue);   --r: -9deg" type="button"><b>Docker</b><small>Containers allowed</small></button>
+        <button class="stamp stamp--rect"    style="--ink: var(--violet); --r: 4deg"  type="button"><b>PostgreSQL</b><small>Approved</small></button>
+        <button class="stamp stamp--hex"     style="--ink: var(--red);    --r: -5deg" type="button"><b>Git &amp; GitHub</b><small>Valid</small></button>
+        <button class="stamp stamp--rect"    style="--ink: var(--orange); --r: 3deg"  type="button"><b>AWS</b><small>Certified: Cloud Technical Essentials</small></button>
+        <button class="stamp stamp--oval"    style="--ink: var(--blue);   --r: -7deg" type="button"><b>Français</b><small>Niveau élémentaire</small></button>
+      </div>
+    </section>
+
+    <!-- ============ INTERESTS (ACHIEVEMENTS) ============ -->
+    <section class="page page--ach" id="achievements" aria-labelledby="ach-title">
+      <div class="page__head">
+        <h2 id="ach-title">Achievements unlocked</h2>
+        <span class="page__no">6</span>
+      </div>
+      <p class="page__intro">Things I do away from a screen.</p>
+
+      <ul class="ach">
+        <li class="ach__item tier-gold"><span class="ach__icon" aria-hidden="true">🪂</span><div><h3>Leap of faith</h3><p>Jumped out of a plane. On purpose.</p></div><span class="ach__tier">Gold</span></li>
+        <li class="ach__item tier-gold"><span class="ach__icon" aria-hidden="true">🪁</span><div><h3>Human kite</h3><p>Parasailing: towed into the sky behind a speedboat.</p></div><span class="ach__tier">Gold</span></li>
+        <li class="ach__item tier-silver"><span class="ach__icon" aria-hidden="true">🏊</span><div><h3>Fish mode</h3><p>Swimming. Pool or sea, I’m in.</p></div><span class="ach__tier">Silver</span></li>
+        <li class="ach__item tier-bronze"><span class="ach__icon" aria-hidden="true">🏄</span><div><h3>Wave rider (beginner)</h3><p>Stood up on a surfboard. Briefly. It counts.</p></div><span class="ach__tier">Bronze</span></li>
+        <li class="ach__item tier-silver"><span class="ach__icon" aria-hidden="true">🧭</span><div><h3>Explorer</h3><p>Travelling and wandering new places. Always planning the next trip.</p></div><span class="ach__tier">Silver</span></li>
+        <li class="ach__item tier-gold"><span class="ach__icon" aria-hidden="true">🏗️</span><div><h3>Site inspector</h3><p>Civil engineering and construction: I like seeing how big things get built.</p></div><span class="ach__tier">Gold</span></li>
+        <li class="ach__item tier-silver"><span class="ach__icon" aria-hidden="true">🍳</span><div><h3>Home chef</h3><p>I cook, experiment and improvise.</p></div><span class="ach__tier">Silver</span></li>
+        <li class="ach__item tier-gold"><span class="ach__icon" aria-hidden="true">🍜</span><div><h3>Taste tester</h3><p>I eat. Food is half the reason to travel.</p></div><span class="ach__tier">Gold</span></li>
+        <li class="ach__item tier-gold"><span class="ach__icon" aria-hidden="true">🎮</span><div><h3>Player one</h3><p>Gamer. Ask me what I’m playing right now.</p></div><span class="ach__tier">Gold</span></li>
+        <li class="ach__item tier-silver"><span class="ach__icon" aria-hidden="true">🤝</span><div><h3>Side quest: give back</h3><p>Community service, because it matters.</p></div><span class="ach__tier">Silver</span></li>
+      </ul>
+    </section>
+
+    <!-- ============ CONTACT (POSTCARD) ============ -->
+    <section class="postcard" id="contact" aria-labelledby="contact-title">
+      <div class="postcard__msg">
+        <h2 id="contact-title">Send me a postcard</h2>
+        <p class="handnote">Email is the best way to reach me. I’m also on LinkedIn and GitHub.</p>
+        <p class="handnote sign">– Arham</p>
+      </div>
+      <div class="postcard__addr">
+        <span class="postage" aria-hidden="true">
+          <svg viewBox="0 0 60 70"><rect x="4" y="4" width="52" height="62" rx="2"/><path d="M12 50 L24 32 L32 42 L38 34 L48 50 Z"/><circle cx="40" cy="20" r="6"/></svg>
+        </span>
+        <span class="postmark" aria-hidden="true">Mumbai<br>2026</span>
+        <ul class="addr">
+          <li>
+            <span class="addr__k">Email</span>
+            <a href="mailto:arhamshah1303@gmail.com">arhamshah1303@gmail.com</a>
+            <button class="copy" type="button" data-copy="arhamshah1303@gmail.com">Copy</button>
+          </li>
+          <li><span class="addr__k">LinkedIn</span><a href="https://www.linkedin.com/in/arham-shah-7120393a5/" target="_blank" rel="noopener">in/arham-shah</a></li>
+          <li><span class="addr__k">GitHub</span><a href="https://github.com/ArhamShah063" target="_blank" rel="noopener">ArhamShah063</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
