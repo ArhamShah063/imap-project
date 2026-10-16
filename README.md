@@ -16,7 +16,7 @@ A touch from my gaming side: an XP bar that fills as you scroll.
 
 ## Built with
 
-Plain HTML, CSS and JavaScript. No framework, no template, no build step.
+Plain HTML, CSS and JavaScript.
 
 ```
 index.html      page structure and content
@@ -25,7 +25,7 @@ script.js       light/dark toggle, cover animation, XP bar, stamps, copy-email
 assets/         favicon and my photo
 ```
 
-## Run it locally
+## Run it locally as well as on a live site.
 
 Open `index.html` in a browser, or run:
 
@@ -34,6 +34,8 @@ python -m http.server
 ```
 
 Then visit http://localhost:8000.
+
+**Live site:** https://arhamshah063.github.io/imap-project/
 
 ## Hosting
 
