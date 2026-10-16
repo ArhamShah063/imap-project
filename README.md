@@ -1,6 +1,6 @@
-# Arham Shah · Passport
+# My personal portfolio
 
-My personal portfolio, designed as a passport, because I like travelling almost as much as I like data.
+A portfolio designed as a passport, because I like travelling almost as much as I like data.
 
 - **Cover:** tap it and the passport opens.
 - **Personal details:** the data page, with my photo and a machine-readable zone at the bottom.
@@ -12,7 +12,7 @@ My personal portfolio, designed as a passport, because I like travelling almost 
 
 A touch from my gaming side: an XP bar that fills as you scroll.
 
-**Light and dark mode:** the round button in the top-right corner switches themes. The site starts from the visitor's device setting and remembers their choice.
+**Light and dark mode:** the round button in the top right corner switches themes. The site starts from the visitor's device setting and remembers their choice.
 
 ## Built with
 
@@ -48,4 +48,4 @@ Deployed with GitHub Pages from the `main` branch.
 - The photo is my own.
 - Emoji icons are rendered by the visitor's system emoji font.
 - All other graphics (passport cover, stamps, barcodes, postage stamp) are drawn in CSS and inline SVG for this site.
-- I used Claude (an AI assistant) to help write and debug the code, as allowed by the assignment guidelines. The idea, content and personality are mine.
+- I used an AI assistant to help write and debug the code.
