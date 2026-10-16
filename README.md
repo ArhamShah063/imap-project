@@ -35,8 +35,7 @@ python -m http.server
 
 Then visit http://localhost:8000.
 
-**Live site:** https://arhamshah063.github.io/imap-project/
-
+**Live site:** https://imap-project-xi.vercel.app
 ## Hosting
 
 Deployed with GitHub Pages from the `main` branch.
